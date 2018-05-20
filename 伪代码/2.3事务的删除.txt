@@ -1,0 +1,46 @@
+procedure:事物删除
+	if 长按一个事物
+		than 弹出选择框（点击空白处可取消操作）
+			if 选择删除选项（点击空白处可取消操作）
+				if 确认
+					then 调用数据库事物分类修改模块（将该事物放入垃圾桶）
+					返回任务清单界面
+				end if
+			end if
+	end if
+or
+	if 选择批量删除
+		if 点击空白处
+			then 取消删除操作
+		else
+			勾选删除对象以及确认
+			调用数据库事物分类修改模块（将该事物放入垃圾桶）
+		end if
+	end if
+end
+
+procedure:垃圾桶的清理
+	if 长按一个事物
+		than 弹出选择框（点击空白处可取消操作）
+			if 选择删除选项（点击空白处可取消操作）
+				if 确认
+					then 调用数据库事物删除模块
+					返回任务清单界面
+				end if
+			end if
+	end if
+or
+	if 选择批量删除
+		if 点击空白处
+			then 取消删除操作
+		else
+			勾选删除对象以及确认
+			调用数据库事物删除模块
+			返回任务清单界面
+		end if
+	end if
+end
+
+procedure:数据库事物删除
+	数据库事物删除操作
+end

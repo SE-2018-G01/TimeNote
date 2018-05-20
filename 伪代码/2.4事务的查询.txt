@@ -1,0 +1,52 @@
+Procedure:日历视图界面
+	If click 任务清单界面
+		进入任务清单界面
+	End if
+	If click 设置界面
+		进入设置界面
+	End if
+	If click 叶子计划界面
+		进入叶子计划界面
+	End if
+
+	显示本月的日历和本日的事务列表
+	If click 日期
+		then 调用数据库事务查询模块
+		显示选择的日期的事务列表
+	End if
+	If click 其他月份的日期
+		then 调用数据库事务查询模块
+		显示其他月份的日历
+		显示选择日期的事务列表
+	End if
+	If click 上一个月
+		then 调用数据库事务查询模块
+		显示上个月的日历
+		显示月末的事务列表
+	End if
+	If click 下一个月
+		then 调用数据库事务查询模块
+		显示下个月的日历
+		显示月初的事务列表
+	End if
+	If click 显示今天
+		then 调用数据库事务查询模块
+		显示本月的日历和本日的事务列表
+	End if
+	If click 新建事务
+		显示新建事务界面
+	End if
+	If click 事务
+		显示事务修改界面
+	End if
+	If click 显示/隐藏已完成
+		显示/隐藏已完成的事务
+	End if
+	If click 按事务优先级排序
+		事务列表按照优先级从高到低排序（默认为按时间排序）
+	End if
+End
+
+procedure:调用数据库事务查询
+	查询操作
+end

@@ -1,0 +1,61 @@
+procedure:申述验证
+	if 点击”忘记密码“
+		then 读取用户id，跳转至申述界面
+			do case
+				case  选择“邮箱找回方式”
+					调用邮箱申述模块
+					if 返回的是验证成功
+						调用重置密码模块
+						返回登陆界面
+					else 
+						print 验证失败
+						返回登陆界面
+				case 选择”手机短信找回方式“
+					调用短信申述模块
+			end case
+	end if
+end
+
+procedure 邮箱申述模块 is
+	begin
+	loop while（true）
+		请用户输入用于验证的邮箱
+		if 点击发送验证邮件至邮箱
+			then获取数据库中该用户的注册邮箱信息
+			if 用于验证的邮箱=注册邮箱
+				then 发送验证码及验证网址至用户邮箱
+					获取输入的验证码或者验证网址点击信息
+					if 邮箱验证成功或者验证码输入正确
+						then返回验证成功
+					else
+						返回验证失败
+					end if
+			else 
+				print  输入的邮箱与注册邮箱不一致
+				重新开始循环
+			end if
+		end if
+	end loop
+end
+
+procedure 短信申述模块 is
+	begin
+	loop while（true）
+		print  和谐了一部分的手机号，请输入您的手机号
+		if 点击发送验证码
+			then获取数据库中该用户的手机号码信息
+			if 输入的手机号=绑定的手机号
+				then 发送验证码短信至该用户手机
+					获取用户输入的验证码
+					if 验证码输入正确
+						then返回验证成功
+					else
+						返回验证失败
+					end if
+			else 
+				print  输入的手机号码与绑定的手机号码不一致
+				重新开始循环
+			end if
+		end if
+	end loop
+end

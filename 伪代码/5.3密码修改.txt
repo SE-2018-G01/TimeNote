@@ -1,0 +1,13 @@
+procedure 重置密码模块 is
+	begin 
+	loop while（true）
+		print 请输入新密码
+		获取用户输入的密码
+		print 请输入确认密码
+		获取用户输入的确认密码
+		if 输入的新密码=确认密码
+			跳出循环
+	end loop
+	返回重置成功
+	回到登陆界面
+end

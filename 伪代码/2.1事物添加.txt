@@ -1,0 +1,15 @@
+Procedure:事务添加
+	read 事物的名称
+	read 事物的描述
+	read 事物的发生时间
+	read 提醒方式
+	read 提醒时间
+	read 重复
+	read 优先级
+	调用数据库事物创建模块
+End
+
+procedure:数据库事物创建
+	判断事物传入了哪些属性
+	数据库操作
+end

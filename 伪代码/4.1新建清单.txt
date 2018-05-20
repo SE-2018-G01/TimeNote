@@ -1,0 +1,18 @@
+Procedure:清单创建
+	read 清单名称
+	read 背景颜色
+	if click 创建清单
+		then 调用数据库清单创建模块
+		选择添加至清单的任务
+		调用事物分类修改模块
+		回到任务清单界面		
+	End if
+End
+
+procedure:数据库清单创建
+	数据库清单创建操作
+end
+
+procedue:事物分类修改
+	数据库事物分类修改操作
+end
