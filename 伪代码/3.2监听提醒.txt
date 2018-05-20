@@ -1,0 +1,21 @@
+Procedure:后台监听
+	Loop until（退出APP）
+		Result1=系统当前时间；
+		Result2=最近的需提醒时间（将来）
+		If (result1=result2)
+			进入事务提醒界面
+		End if
+	End Loop
+End
+Procedure:事务提醒界面
+	数据库提醒种类查询
+	if 为普通提醒
+		then 调用普通提醒模块
+	else if
+		then 调用叶子计时提醒模块
+	end if
+End
+
+procedure:数据库提醒种类查询
+	查询操作
+end
