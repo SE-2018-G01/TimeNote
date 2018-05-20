@@ -1,0 +1,29 @@
+Procedure:事物提醒设置
+	read 提醒时间
+	read 铃声
+	read 振动
+	read 提前提醒时间
+	read 重复设置
+	read 提醒弹窗是否开启
+	read 系统通知栏是否开启
+	if click 返回
+		调用数据库提醒修改模块
+		回到设置界面
+	end if
+End
+
+Procedure:叶子计时提醒设置
+	read 提醒时间
+	read 铃声
+	read 振动
+	read 提醒弹窗是否开启
+	read 系统通知栏是否开启
+	if click 返回
+		调用数据库提醒修改模块
+		回到设置界面
+	end if
+End
+
+procedure:数据库提醒修改
+	修改操作
+end

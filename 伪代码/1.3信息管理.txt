@@ -1,0 +1,48 @@
+Procedure:个人信息修改界面
+	个人信息界面
+	if click 修改个人信息
+	Loop until<数据更新>
+		If click 返回
+			回到个人信息界面
+		End if
+		read 新昵称
+		if 文本框失去焦点
+			then 新昵称格式检查
+			If false
+				then 弹出对话框：昵称格式错误
+				重新输入
+			End if
+		read 新密码
+		if 文本框失去焦点
+			then 新密码格式检查
+			If false
+				then 弹出对话框：密码格式错误
+				重新输入
+			End if
+		read 密码确认
+		if 文本框失去焦点
+			then 密码匹配检验
+			If false
+				then 弹出对话框：密码不一致
+				重新输入
+			End if
+		read 新邮箱
+		if 文本框失去焦点
+			then 新邮箱验证及格式检查
+			If false
+				then 弹出对话框：邮箱验证及格式检查失败
+				重新输入
+			End if
+		If click确认修改
+			调用数据库用户信息修改操作模块
+			更新用户信息主文件
+			回到个人信息界面
+		End if
+	End loop
+End
+
+procedure:数据库用户信息修改操作
+	获取用户id
+	检测修改了哪些属性
+	数据库修改操作
+end

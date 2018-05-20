@@ -1,0 +1,8 @@
+Procedure:账户申诉界面
+	read 用户名
+	read 昵称
+	read 邮箱
+	if click 提交申诉
+		then 跳转至申诉验证界面
+	End if
+End

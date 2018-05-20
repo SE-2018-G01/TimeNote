@@ -1,0 +1,18 @@
+proceduce 事物的修改 is
+	begin
+	if 长按一个事物
+		than 弹出选择框（点击空白处可取消操作）
+			if 选择修改选项（点击空白处可取消操作）
+				then 弹出修改列表
+				read 获取修改信息
+				调用数据库事物修改模块
+			end if
+	end if
+end
+
+Procedure:事务顺序设置
+	If click 事务上下拖动
+		交换选择的事务相关事物的顺序（只有同一个清单中的事物才能交换顺序）
+		调用数据库事物修改模块
+	End if
+End
