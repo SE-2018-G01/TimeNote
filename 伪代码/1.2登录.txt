@@ -1,0 +1,24 @@
+Procedure:登陆界面
+	if click 注册
+		then 跳转至注册界面
+	End if
+	if click 忘记密码
+		调用密码申诉模块
+	读入用户名
+	读入密码
+	调用数据库登录操作模块
+	If 验证失败
+		then 弹出对话框：账号或密码错误
+	Else
+		进入主页面
+	End if
+End
+
+procedure:数据库登录操作模块
+	用户名及密码数据库查询
+	if 用户名及密码匹配
+		then 返回登录验证通过
+	else
+		返回验证失败
+	end if
+end

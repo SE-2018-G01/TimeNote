@@ -1,0 +1,71 @@
+Procedure:清单顺序设置
+	If click 清单上下拖动
+		交换选择的清单相关清单的顺序（只有同类清单才能交换顺序，例如系统清单跟系统清单，个人清单和个人清单）
+	End if
+End
+Procedure:系统清单设置
+	If click 隐藏/显示系统清单
+		更新清单主文件（删除系统清单的顺序字段或给顺序字段赋值，值为当前可设置的最数）
+	End if
+End
+
+Procedure:任务清单界面
+	If click 日历界面
+		进入日历视图界面
+	End if
+	If click 设置界面
+		进入设置界面
+	End if
+	If click 叶子计划界面
+		进入叶子计划界面
+	End if
+	If click 个人头像
+		进入个人信息界面
+	Endif
+	If click 清单设置
+		进入清单设置界面
+	Endif
+	显示默认清单中的事务列表
+	If click 清单类别
+		显示选择的清单中的事务列表
+	End if
+	If click 新建事务
+		显示新建事务界面
+	End if	
+	If click 事务
+		显示事务修改界面
+	End if
+	If click 显示/隐藏已完成
+		显示/隐藏已完成的事务
+	End if
+	If click 按事务优先级排序
+		事务列表按照优先级从高到低排序（默认为按时间排序）
+	End if
+End
+
+Procedure:个人成就查询
+	If click 退出
+		返回主界面
+	End if
+	Result1=用户的成就值
+	If（result1<100）
+		显示徽章（青铜管理员）
+	Elseif（result1<500）
+		显示徽章（白银管理员）
+	Elseif（result1<1000）
+		显示徽章（黄金管理员）
+	Elseif（result1<2000）
+		显示徽章（钻石管理员）
+	Elseif（result1<5000）
+		显示徽章（日程达人）
+	Elseif（result1<10000）
+		显示徽章（日程王者）
+	End if
+	Result2=本周任务信息
+	根据（Result2）输出本周每日任务完成情况的柱状统计图
+	根据（Result2）输出本周任务的完成情况的饼状图
+	If click 历史统计
+		Result3=用户所有任务信息
+		根据（result3）输出本月每日任务完成情况折线统计图
+	End if
+End

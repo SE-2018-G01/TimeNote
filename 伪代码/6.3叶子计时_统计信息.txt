@@ -1,0 +1,20 @@
+procedure:叶子计时统计
+	调用数据库叶子计时统计查询模块
+	获取系统时间
+	result1=计算今日收成
+	print result1
+	result2=计算本周收成
+	print result2
+	result3=计算总收成
+	print result3
+	result4=计算今日专注时长
+	print result4
+	result5=计算本周专注时长
+	print result5
+	result6=计算总专注时长
+	print result6
+end
+
+proceudure:数据库叶子计时统计查询
+	查询操作
+end
